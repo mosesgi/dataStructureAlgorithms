@@ -47,8 +47,6 @@ public class MergeSort {
         }
     }
 
-
-
     public static void main(String[] args) {
         int[] array = {5, 3, 6, 2, 1, 9, 7, 8, 4, 0};
         System.out.println("未排序数组顺序为: ");
