@@ -2,7 +2,7 @@ package com.moses.structure;
 
 /**
  * 单向链表
- * 尾部操作麻烦 - 需要遍历到尾部，再
+ * 尾部操作效率低 - 需要先遍历到尾部
  */
 public class SinglyLinkedList {
     private int size;

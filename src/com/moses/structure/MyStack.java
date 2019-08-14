@@ -1,5 +1,8 @@
 package com.moses.structure;
 
+/**
+ * 栈
+ */
 public class MyStack {
     private int[] array;
     private int maxSize;

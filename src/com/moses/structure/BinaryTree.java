@@ -206,19 +206,20 @@ public class BinaryTree {
         System.out.println(bt.find(100));
         System.out.println(bt.find(200));
     }
+
+    private class Node {
+        int data;       //节点数据
+        Node leftChild;
+        Node rightChild;
+        boolean isDelete;
+
+        public Node(int data) {
+            this.data = data;
+        }
+
+        public void display() {
+            System.out.println(data);
+        }
+    }
 }
 
-class Node {
-    int data;       //节点数据
-    Node leftChild;
-    Node rightChild;
-    boolean isDelete;
-
-    public Node(int data) {
-        this.data = data;
-    }
-
-    public void display() {
-        System.out.println(data);
-    }
-}
