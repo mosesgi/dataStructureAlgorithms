@@ -4,8 +4,8 @@ package com.moses.structure;
  * 循环队列
  * 当队尾到数组最大值后，绕到开始的位置，从0开始
  */
-public class MyQueue {
-    private Object[] queArray;
+public class MyQueue<T> {
+    private T[] queArray;
     private int maxSize;
     private int front;
     private int rear;
@@ -13,7 +13,7 @@ public class MyQueue {
 
     public MyQueue(int size){
         maxSize = size;
-        queArray = new Object[maxSize];
+        queArray = (T[])new Object[maxSize];
         front = 0;
         rear = -1;
         nItems = 0;
@@ -31,7 +31,7 @@ public class MyQueue {
         return nItems;
     }
 
-    public void insert(int value){
+    public void insert(T value){
         if(isFull()){
             System.out.println("队列已满！");
         } else {
@@ -45,8 +45,8 @@ public class MyQueue {
         }
     }
 
-    public Object remove(){
-        Object removeValue = null;
+    public T remove(){
+        T removeValue = null;
         if(!isEmpty()){
             removeValue = queArray[front];
             queArray[front] = null;
@@ -60,12 +60,12 @@ public class MyQueue {
         return removeValue;
     }
 
-    public Object peekFront(){
+    public T peekFront(){
         return queArray[front];
     }
 
     public static void main(String[] args) {
-        MyQueue queue = new MyQueue(3);
+        MyQueue<Integer> queue = new MyQueue<Integer>(3);
         queue.insert(1);
         queue.insert(2);
         queue.insert(3);

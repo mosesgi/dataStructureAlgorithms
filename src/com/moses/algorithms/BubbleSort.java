@@ -2,6 +2,7 @@ package com.moses.algorithms;
 
 /**
  * 冒泡排序
+ * 时间复杂度 O(n²), 空间复杂度为常量O(1)
  */
 public class BubbleSort {
 

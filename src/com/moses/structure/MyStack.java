@@ -3,28 +3,28 @@ package com.moses.structure;
 /**
  * 栈
  */
-public class MyStack {
-    private int[] array;
+public class MyStack<T> {
+    private T[] array;
     private int maxSize;
     private int top;
 
     public MyStack(int size){
         this.maxSize = size;
-        array = new int[size];
+        array = (T[])new Object[size];
         top = -1;
     }
 
-    public void push(int value){
+    public void push(T value){
         if(top < maxSize - 1){
             array[++top] = value;
         }
     }
 
-    public int pop(){
+    public T pop(){
         return array[top--];
     }
 
-    public int peek(){
+    public T peek(){
         return array[top];
     }
 
@@ -37,7 +37,7 @@ public class MyStack {
     }
 
     public static void main(String[] args) {
-        MyStack stack = new MyStack(10);
+        MyStack<Integer> stack = new MyStack<Integer>(10);
         stack.push(1);
         stack.push(2);
         stack.push(3);

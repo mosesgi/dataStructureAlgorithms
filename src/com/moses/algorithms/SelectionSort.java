@@ -4,6 +4,8 @@ package com.moses.algorithms;
  * 选择排序
  * 每一次从待排序的数据元素中选出最小的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。
  * 每次找到最小数，放在最左边，然后处理右边剩下的
+ * 时间复杂度为O(n²) 无论是哪种情况，哪怕原数组已排序完成，它也将花费将近n²/2次遍历来确认一遍.
+ * 空间复杂度为常量O(1)
  */
 public class SelectionSort {
     public static int[] sort(int[] array) {

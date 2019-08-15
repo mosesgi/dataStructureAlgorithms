@@ -3,6 +3,7 @@ package com.moses.algorithms;
 /**
  * 插入排序
  * 每一步将一个待排序的记录，插入到前面已经排好序的有序序列中去，直到插完所有元素为止。
+ * 时间复杂度为O(n²) 空间复杂度为常量O(1)
  */
 public class InsertionSort {
 
